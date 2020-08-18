@@ -378,7 +378,7 @@ var pizzaElementGenerator = function(i) {
   pizzaContainer.id = "pizza" + i;                // gives each pizza element a unique id
   pizzaImageContainer.style.width="35%";
 
-  pizzaImage.src = "images/pizza.png";
+  pizzaImage.src = "images/pizza-min.png";
   pizzaImage.classList.add("img-responsive");
   pizzaImageContainer.appendChild(pizzaImage);
   pizzaContainer.appendChild(pizzaImageContainer);
@@ -407,15 +407,16 @@ var resizePizzas = function(size) {
     switch(size) {
       case "1":
         document.querySelector("#pizzaSize").innerHTML = "Small";
-        return;
+        break;
       case "2":
         document.querySelector("#pizzaSize").innerHTML = "Medium";
-        return;
+        break;
       case "3":
         document.querySelector("#pizzaSize").innerHTML = "Large";
-        return;
+        break;
       default:
         console.log("bug in changeSliderLabel");
+        break;
     }
   }
 
@@ -432,12 +433,16 @@ var resizePizzas = function(size) {
       switch(size) {
         case "1":
           return 0.25;
+          break;
         case "2":
           return 0.3333;
+          break;
         case "3":
           return 0.5;
+          break;
         default:
           console.log("bug in sizeSwitcher");
+          break;
       }
     }
 
